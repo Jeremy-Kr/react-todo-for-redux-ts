@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { addTodo } from "../../redux/modules/todoList";
+import { addTodo } from "redux/modules/todoList";
+import { TodoItemType } from "types";
 import { useDispatch } from "react-redux";
 
-const TodoInput = (): React.ReactElement => {
+const TodoInput = () => {
   const [todoTitle, setTodoTitle] = useState("");
   const [todoContent, setTodoContent] = useState("");
 
@@ -49,7 +50,7 @@ const TodoInput = (): React.ReactElement => {
     }
     event.preventDefault();
 
-    const newTodoItem = {
+    const newTodoItem: TodoItemType = {
       todoTitle,
       todoContent,
       isDone: false,

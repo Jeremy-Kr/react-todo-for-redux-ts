@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { TodoList } from ".";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/config/configStore";
+import { useAppSelector } from "hooks";
 
-const TodoContainer = (): React.ReactElement => {
-  const todoList = useSelector((state: RootState) => state.todoList);
+const TodoContainer = () => {
+  const todoList = useAppSelector((state) => state.todoList);
 
   const todoItems = todoList.filter((item) => !item.isDone);
   const doneItems = todoList.filter((item) => item.isDone);

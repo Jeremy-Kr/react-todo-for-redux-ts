@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Header = (): React.ReactElement => {
+const Header = () => {
   return (
     <StickyContainer>
       <FlexHeader>

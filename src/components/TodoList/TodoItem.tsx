@@ -1,19 +1,23 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import {
-  deleteTodo,
-  toggleTodo,
-  updateTodo,
-} from "../../redux/modules/todoList";
+import { deleteTodo, toggleTodo, updateTodo } from "redux/modules/todoList";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import {
-  CustomButtonType,
-  TodoContentInputType,
-  TodoItemProps,
-} from "../../types";
+import { TodoItemType } from "types";
 
-const TodoItem = ({ todoItem }: TodoItemProps): React.ReactElement => {
+interface TodoItemProps {
+  todoItem: TodoItemType;
+}
+interface TodoContentInputType {
+  valueLength: number;
+}
+
+interface CustomButtonType {
+  isDone?: boolean;
+  buttonColor?: string;
+}
+
+const TodoItem = ({ todoItem }: TodoItemProps) => {
   const dispatch = useDispatch();
 
   const { id } = todoItem;

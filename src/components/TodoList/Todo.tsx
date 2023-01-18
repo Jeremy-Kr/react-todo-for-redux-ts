@@ -1,6 +1,6 @@
 import { TodoInput, TodoContainer } from ".";
 
-const Todo = (): React.ReactElement => {
+const Todo = () => {
   return (
     <>
       <TodoInput />

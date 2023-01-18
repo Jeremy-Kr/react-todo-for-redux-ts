@@ -1,12 +1,14 @@
 import { TodoItem } from ".";
 import styled from "styled-components";
 import React from "react";
-import { TodoListProps } from "../../types";
+import { todoListType } from "types";
 
-const TodoList = ({
-  todoItems,
-  children,
-}: TodoListProps): React.ReactElement => {
+interface TodoListProps {
+  todoItems: todoListType;
+  children: React.ReactNode;
+}
+
+const TodoList = ({ todoItems, children }: TodoListProps) => {
   return (
     <ul>
       <CustomH2>{children}</CustomH2>
