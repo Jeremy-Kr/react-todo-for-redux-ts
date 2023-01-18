@@ -3,15 +3,6 @@ import { TodoList } from ".";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/config/configStore";
 
-export interface TodoItemType {
-  todoTitle: string;
-  todoContent: string;
-  isDone: boolean;
-  id: string;
-}
-
-export type todoListType = TodoItemType[];
-
 const TodoContainer = (): React.ReactElement => {
   const todoList = useSelector((state: RootState) => state.todoList);
 

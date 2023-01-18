@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   deleteTodo,
   toggleTodo,
@@ -7,20 +7,11 @@ import {
 } from "../../redux/modules/todoList";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { TodoItemType } from "./TodoContainer";
-
-interface TodoItemProps {
-  todoItem: TodoItemType;
-}
-
-interface TodoContentInputType {
-  valueLength: number;
-}
-
-interface CustomButtonType {
-  isDone?: boolean;
-  buttonColor?: string;
-}
+import {
+  CustomButtonType,
+  TodoContentInputType,
+  TodoItemProps,
+} from "../../types";
 
 const TodoItem = ({ todoItem }: TodoItemProps): React.ReactElement => {
   const dispatch = useDispatch();

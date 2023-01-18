@@ -1,12 +1,7 @@
 import { TodoItem } from ".";
 import styled from "styled-components";
-import { todoListType } from "./TodoContainer";
 import React from "react";
-
-interface TodoListProps {
-  todoItems: todoListType;
-  children: React.ReactNode;
-}
+import { TodoListProps } from "../../types";
 
 const TodoList = ({
   todoItems,
