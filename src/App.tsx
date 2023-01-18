@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout, GlobalStyle, Todo, TodoDetail } from "./components";
 
-const App = () => {
+const App = (): React.ReactElement => {
   return (
     <>
       <GlobalStyle />

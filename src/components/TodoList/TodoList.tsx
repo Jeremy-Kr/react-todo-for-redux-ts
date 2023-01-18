@@ -8,7 +8,10 @@ interface TodoListProps {
   children: React.ReactNode;
 }
 
-const TodoList = ({ todoItems, children }: TodoListProps) => {
+const TodoList = ({
+  todoItems,
+  children,
+}: TodoListProps): React.ReactElement => {
   return (
     <ul>
       <CustomH2>{children}</CustomH2>

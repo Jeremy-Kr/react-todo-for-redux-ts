@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { RootState } from "../redux/config/configStore";
 
-const TodoDetail = () => {
+const TodoDetail = (): React.ReactElement => {
   const todoList = useSelector((state: RootState) => state.todoList);
   const param = useParams();
   const navigate = useNavigate();

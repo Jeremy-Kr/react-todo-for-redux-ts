@@ -12,7 +12,7 @@ export interface TodoItemType {
 
 export type todoListType = TodoItemType[];
 
-const TodoContainer = () => {
+const TodoContainer = (): React.ReactElement => {
   const todoList = useSelector((state: RootState) => state.todoList);
 
   const todoItems = todoList.filter((item) => !item.isDone);

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const Footer = () => {
+const Footer = (): React.ReactElement => {
   return <CustomFooter>Copyright &copy; 2022.12.</CustomFooter>;
 };
 

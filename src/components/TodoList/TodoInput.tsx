@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { addTodo } from "../../redux/modules/todoList";
 import { useDispatch } from "react-redux";
 
-const TodoInput = () => {
+const TodoInput = (): React.ReactElement => {
   const [todoTitle, setTodoTitle] = useState("");
   const [todoContent, setTodoContent] = useState("");
 
